@@ -34,7 +34,18 @@ ul {
   }
   #input {
     color: #DFCFBE;
-   font-size: 45px;
+   font-size: 30px;
+    background: 
+    linear-gradient(to right, rgba(128, 0, 32, 1), rgba(128, 0, 32, 1)),
+    linear-gradient(to right, rgba(128, 0, 32, 1), rgba(255, 127, 127, 1), rgba(255, 255, 255, 1));
+  background-size: 100% 0.1em, 0 0.1em;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 500ms;
+        }
+        .academies:hover, .academies:focus {
+            background-size: 0 0.1em, 100% 0.1em;  
+        }
   }
  </style> 
  <head>
@@ -43,7 +54,7 @@ ul {
  </head>
 <center><h1>Web 2 Websites</h1></center>
  <center><button onclick="inputFunc()">User input button</button></center>
- <p id="input"></p>
+ <center><p id="input"></p></center>
  <ul>
   <div class="hover">
 <center><li class = "hover">Amanda: <a href="https://watsonbasil2911.github.io/webdesign2/" target="_blank">HERE</a></li></center>
