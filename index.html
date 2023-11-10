@@ -32,12 +32,18 @@ ul {
   #google_translate_element {
    color: red;
   }
+  #input {
+    color: #DFCFBE;
+   font-size: 45px;
+  }
  </style> 
  <head>
   <title>Web 2 Storage Unit</title>
   <link rel="icon" type="image/x-icon" href="https://patch.com/img/cdn20/users/3069/20230930/100706/styles/patch_image/public/jala-pic___30100124378.jpg">
  </head>
 <center><h1>Web 2 Websites</h1></center>
+ <center><button onclick="inputFunc()">User input button</button></center>
+ <p id="input"></p>
  <ul>
   <div class="hover">
 <center><li class = "hover">Amanda: <a href="https://watsonbasil2911.github.io/webdesign2/" target="_blank">HERE</a></li></center>
@@ -91,5 +97,15 @@ function googleTranslateElementInit() {
 </script>
 
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+ <script>
+  function inputFunc() {
+   let name = prompt("What is your name", "Enter here");
+   if (name != null) {
+    document.getElementById("input").innerHTML = "Hi " + name + ", welcome to the site.";
+   }
+  }
+ </script>
+ 
 
 </html>
