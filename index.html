@@ -103,14 +103,16 @@ function googleTranslateElementInit() {
 
  <script>
   function inputFunc() {
-   let name = prompt("What is your name", "Enter here");
-   document.cookie = name"; expires=Wed, 26 Jun 2024 13:47:11 UTC; path=/;";
+  let name = prompt("What is your name", "Enter here");
+  if (name != null) {
+    document.getElementById("input").innerHTML = "Hi " + name + ", welcome to the site.";
+   }
+  }
+  function cookie() {
+    document.cookie = name"; expires=Wed, 26 Jun 2024 13:47:11 UTC; path=/;";
    let x = document.cookie;
    if (x != "") {
     document.getElementById("input").innerHTML = "Hi " + name + " Welcome back.";
-   }
-   else if (name != null) {
-    document.getElementById("input").innerHTML = "Hi " + name + ", welcome to the site.";
    }
   }
  </script>
