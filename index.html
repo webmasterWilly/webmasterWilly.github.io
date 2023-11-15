@@ -108,11 +108,11 @@ function googleTranslateElementInit() {
   let name = prompt("What is your name", "Enter here");
    document.cookie = '' +name+ ';';
    let x = document.cookie;
-  if (name != null && name.equals(x)) {
-    document.getElementById("input").innerHTML = "Hi " + name + ", You've been here before.";
-   }
-   else if (name != null) {
+  if (name != null) {
     document.getElementById("input").innerHTML = "Hi " + name + ", Welcome to the site.";
+   }
+   if (name != null && name.equals(x)) {
+    document.getElementById("input").innerHTML = "Wait, you've been here before.";
    }
   }
  </script>
