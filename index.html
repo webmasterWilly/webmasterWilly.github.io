@@ -43,7 +43,7 @@ ul {
   <title>Web 2 Storage Unit</title>
   <link rel="icon" type="image/x-icon" href="https://patch.com/img/cdn20/users/3069/20230930/100706/styles/patch_image/public/jala-pic___30100124378.jpg">
  </head>
- <body>
+ <body onload="cookie()">
 <center><h1>Web 2 Websites</h1></center>
  <center><button onclick="inputFunc()">User input button</button></center>
  <center><p id="input"></p></center>
@@ -92,14 +92,16 @@ ul {
   </div>
  </ul>
 <center><div id="google_translate_element"></div></center>
- </body>
-<script type="text/javascript">
+  <!-- Google Translate Code -->
+  <script type="text/javascript">
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
 }
 </script>
 
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+ </body>
 
  <script>
   function inputFunc() {
