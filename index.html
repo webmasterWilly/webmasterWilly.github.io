@@ -116,7 +116,7 @@ function googleTranslateElementInit() {
  <script>
   function inputFunc() {
   let name = prompt("What is your name", "Enter here");
-   document.cookie = '' +name+ ';';
+   document.cookie = name;
    let x = document.cookie;
   if (name != null) {
     document.getElementById("input").innerHTML = "Hi " + name + ", Welcome to the site.";
