@@ -119,7 +119,7 @@ function googleTranslateElementInit() {
    document.cookie = '' +name+ ';';
    let x = document.cookie;
   if (name != null) {
-    document.getElementById("input").innerHTML = "Hi " + x + ", Welcome to the site.";
+    document.getElementById("input").innerHTML = "Hi " + name + ", Welcome to the site.";
    }
    if (name != null && name.equals(x)) {
     document.getElementById("repeat").innerHTML = "Wait, you've been here before.";
