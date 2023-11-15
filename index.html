@@ -104,7 +104,12 @@ function googleTranslateElementInit() {
  <script>
   function inputFunc() {
    let name = prompt("What is your name", "Enter here");
-   if (name != null) {
+   document.cookie = name;
+   let x = document.cookie;
+   if (x != "") {
+    document.getElementById("input").innerHTML = "Hi " + name + " Welcome back.";
+   }
+   else if (name != null) {
     document.getElementById("input").innerHTML = "Hi " + name + ", welcome to the site.";
    }
   }
