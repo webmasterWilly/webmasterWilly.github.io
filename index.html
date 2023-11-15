@@ -114,7 +114,7 @@ function googleTranslateElementInit() {
     document.cookie =  "username=User; expires=Thu, 01 Jan 2024 00:00:00 UTC; path=/;";
    let x = document.cookie;
    if (x != "") {
-    document.getElementById("input").innerHTML = "Hi " + name + " Welcome back.";
+    document.getElementById("input").innerHTML = "Hi " + x + " Welcome back.";
    }
    else {
     document.getElementById("input").innerHTML = ""; 
