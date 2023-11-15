@@ -120,13 +120,13 @@ function googleTranslateElementInit() {
  <script>
   function inputFunc() {
   let name = prompt("What is your name", "");
-   document.cookie = name;
+   document.cookie = "";
    let x = document.cookie;
    const comp = name.localeCompare(x);
   if (name != null) {
     document.getElementById("input").innerHTML = "Hi " + name + ", Welcome to the site.";
    }
-   if (comp == 0) {
+   if (comp > 0) {
     document.getElementById("repeat").innerHTML = "Wait, you've been here before.";
    }
    if (name.equals("Amanda")) {
