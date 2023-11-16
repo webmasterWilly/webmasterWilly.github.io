@@ -120,13 +120,13 @@ function googleTranslateElementInit() {
  <script>
   function inputFunc() {
   let name = prompt("What is your name", "");
-   document.cookie = name;
+   document.cookie = "Wanderer";
    let x = document.cookie;
   if (name != null) {
     document.getElementById("input").innerHTML = "Hi " + name + ", Welcome to the site.";
    }
    if (x != "") {
-    document.getElementById("repeat").innerHTML = "Wait, you've been here before.";
+    document.getElementById("repeat").innerHTML = "Welcome back.";
    }
    if (name.equals("Amanda")) {
     document.getElementById("hover").style.color = "red";
