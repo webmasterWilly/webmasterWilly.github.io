@@ -9,6 +9,9 @@
       color: white;
       background-color: deeppink;
     }
+    img:hover {
+      cursor: url('deadMiceMan.png'), auto;
+    }
     #finish {
       width: 100px;
       height: 100px;
@@ -27,6 +30,7 @@
      <img id="img3" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
      <img id="img4" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
      <img id="img5" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
+     <img id="img6" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
     <img id="finish" onmouseenter="alerter()" src="https://cdn3.iconfinder.com/data/icons/sports-games-4/24/Finish-512.png" alt="The end" title="The end"/>
   </body>
   <script>
@@ -52,6 +56,8 @@
     randImg(element4);
     let element5 = document.getElementById("img5");
     randImg(element5);
+    let element6 = document.getElementById("img6");
+    randImg(element6);
     
     function alerter() {
       alert("You touched " + final + " landmines on your journey!");
