@@ -3,7 +3,7 @@
   <style>
     html {
       background-color: deeppink;
-      cursor: url('mouse2.png'), auto;
+      cursor: url('mouse3.png'), auto;
     }
     h1 {
       color: white;
@@ -22,11 +22,11 @@
   </head>
   <body>
     <center><h1>Don't let your mouse hit the landmines!</h1></center>
-    <img id="img1" onmouseenter="hoverFunc()" src="https://cdn-icons-png.flaticon.com/512/8346/8346425.png" alt="landmine" title="landmine!!!"/>
-    <img id="img2" onmouseenter="hoverFunc()" src="https://cdn-icons-png.flaticon.com/512/8346/8346425.png" alt="landmine" title="landmine!!!"/>
-     <img id="img3" onmouseenter="hoverFunc()" src="https://cdn-icons-png.flaticon.com/512/8346/8346425.png" alt="landmine" title="landmine!!!"/>
-     <img id="img4" onmouseenter="hoverFunc()" src="https://cdn-icons-png.flaticon.com/512/8346/8346425.png" alt="landmine" title="landmine!!!"/>
-     <img id="img5" onmouseenter="hoverFunc()" src="https://cdn-icons-png.flaticon.com/512/8346/8346425.png" alt="landmine" title="landmine!!!"/>
+    <img id="img1" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
+    <img id="img2" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
+     <img id="img3" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
+     <img id="img4" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
+     <img id="img5" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
     <img id="finish" onmouseenter="alerter()" src="https://cdn3.iconfinder.com/data/icons/sports-games-4/24/Finish-512.png" alt="The end" title="The end"/>
   </body>
   <script>
@@ -39,8 +39,8 @@
     }
     function randImg(el) {
       el.style.position = "absolute";
-      el.style.top = randInt(0, 100) + "px";
-      el.style.left = randInt(0, 100) + "px";
+      el.style.top = randInt(0, 800) + "px";
+      el.style.left = randInt(0, 800) + "px";
     }
     let element = document.getElementById("img1");
     randImg(element);
