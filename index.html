@@ -42,6 +42,14 @@ ul {
    background-color: black;
    width: 125px;
   }
+  .nav2 {
+   text-align: center;
+   border: 2px solid black;
+   border-radius: 15px;
+   mix-blend-mode: overlay;
+   background-color: black;
+   width: 125px;
+  }
   #input {
     color: white;
    font-size: 30px;
@@ -67,6 +75,7 @@ ul {
  </head>
  <body>
   <div class="nav"><h2><a href="rubric.html">Grading Rubric</a></h2></div>
+  <div class="nav2"><h2><a href="game.html">Fun Game</a></h2></div>
 <center><h1>Web 2 Websites</h1></center>
  <center><button onclick="inputFunc()">User input button</button></center>
  <center><p id="input"></p></center>
@@ -134,13 +143,7 @@ function googleTranslateElementInit() {
    let x = document.cookie;
   if (name != null) {
     document.getElementById("input").innerHTML = "Hi " + name + ", Welcome to the site.";
-   }
-   if (x != "") {
-    document.getElementById("repeat").innerHTML = "Welcome back.";
-   }
-   if (name.equals("Amanda")) {
-    document.getElementById("hover").style.color = "red";
-   }
+   } 
   }
  </script>
  
