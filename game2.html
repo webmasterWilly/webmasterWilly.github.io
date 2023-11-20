@@ -15,25 +15,8 @@
       float: right;
       margin-top: 300px;
     }
-    #img1 {
-      animation: slide 10s linear infinite;
-    }
-    #img2 {
-      animation: slide 15s linear infinite;
-    }
-    #img3 {
-      animation: slide 20s linear infinite;
-    }
-    #img4 {
-      animation: slide 10s linear infinite;
-    }
-    #img5 {
-      animation: slide 12s linear infinite;
-    }
-    @keyframes slide {
-      0%{transform: translateX(0%)}
-      100%{transform: translateX(100%)}
-    }
+   
+      
   </style>
   <head>
     <title>Web 2 Game</title>
@@ -41,11 +24,13 @@
   </head>
   <body>
     <center><h1>Don't let your mouse hit the landmines!</h1></center>
-    <img id="img1" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
-    <img id="img2" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
-     <img id="img3" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
-     <img id="img4" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
-     <img id="img5" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
+    <marquee direction="right"><img id="img1" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/></marquee>
+    <marquee direction="up"><img id="img2" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/></marquee>
+     <marquee direction="left"<img id="img3" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/></marquee>
+     <marquee direction="down"><img id="img4" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/></marquee>
+     <marquee direction="right"><img id="img5" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/></marquee>
+       <marquee direction="up"><img id="img5" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/></marquee>
+       
     <img id="finish" onmouseenter="alerter()" src="https://cdn3.iconfinder.com/data/icons/sports-games-4/24/Finish-512.png" alt="The end" title="The end"/>
   </body>
   <script>
