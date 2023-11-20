@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <style>
     html {
-      background-color: deeppink;
       cursor: url('mouse3.png'), auto;
     }
     h1 {
@@ -23,7 +22,7 @@
     <title>Web 2 Game</title>
     
   </head>
-  <body>
+  <body id="back">
     <center><h1>Don't let your mouse hit the landmines!</h1></center>
     <img id="img1" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
     <img id="img2" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
@@ -62,5 +61,19 @@
     function alerter() {
       alert("You touched " + final + " landmines on your journey!");
     }
-  </script>
+    let i = 0;
+    let color = ["green", "yellow", "red"];
+    function shift() {
+      var doc = document.getElementById("back");
+      doc.style.backgroundColor = color[i];
+      i = (i + 1) % color.length;
+    }
+    setInterval(shift(), 1000);
+    function dead() {
+      if (color[i].equals("red")) {
+        alert("You moved while the light was red! Womp womp.");
+        location.reload();
+      }
+    }
+   </script>
 </html>
