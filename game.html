@@ -69,7 +69,8 @@
       i = (i + 1) % color.length;
     }
     setInterval(shift(), 1000);
-    function dead() {
+    
+    function redLight() {
       if (color[i].equals("red")) {
         alert("You moved while the light was red! Womp womp.");
         location.reload();
