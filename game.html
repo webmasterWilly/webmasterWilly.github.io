@@ -29,7 +29,7 @@
     <title>Web 2 Game</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
-  <body id="back">
+  <body id="back" onload="dead()">
     <center><h1>Don't let your mouse hit the webmines!</h1></center>
     <center><button onclick="refresh()">Reset</button></center>
     <img id="img1" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
@@ -88,6 +88,5 @@
         alert("You moved while the light was red! Womp womp.");
       }
     }
-    window.onload(dead());
    </script>
 </html>
