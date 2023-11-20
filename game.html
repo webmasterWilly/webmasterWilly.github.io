@@ -6,7 +6,11 @@
     }
     h1 {
       color: white;
-      background-color: deeppink;
+      background-color: purple;
+    }
+    button {
+      border: 2px solid black;
+      border-radius: 15px;
     }
     img:hover {
       cursor: url('deadMiceMan.png'), auto;
@@ -20,10 +24,11 @@
   </style>
   <head>
     <title>Web 2 Game</title>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
   <body id="back">
     <center><h1>Don't let your mouse hit the landmines!</h1></center>
+    <center><button onclick="refresh()">Reset</button></center>
     <img id="img1" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
     <img id="img2" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
      <img id="img3" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
@@ -61,6 +66,9 @@
     function alerter() {
       alert("You touched " + final + " landmines on your journey!");
     }
+    function refresh() {
+      location.reload();
+    }
     let i = 0;
     let color = ["green", "yellow", "red"];
     function shift() {
@@ -70,12 +78,11 @@
         i = (i + 1) % color.length;
       
     }
-    setInterval(shift, 1000);
+    setInterval(shift, 750);
     
     function redLight() {
       if (color[i].equals("red")) {
         alert("You moved while the light was red! Womp womp.");
-        location.reload();
       }
     }
    </script>
