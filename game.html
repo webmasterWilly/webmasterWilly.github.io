@@ -65,10 +65,12 @@
     let color = ["green", "yellow", "red"];
     function shift() {
       var doc = document.getElementById("back");
+    
       doc.style.backgroundColor = color[i];
-      i = (i + 1) % color.length;
+        i = (i + 1) % color.length;
+      
     }
-    setInterval(shift(), 1000);
+    setInterval(shift, 1000);
     
     function redLight() {
       if (color[i].equals("red")) {
