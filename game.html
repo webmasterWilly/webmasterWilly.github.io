@@ -22,16 +22,17 @@
       width: 100px;
       height: 100px;
       float: right;
-      margin-top: 300px;
+      margin-top: 400px;
     }
   </style>
   <head>
     <title>Web 2 Game</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
   <body id="back">
     <center><h1>Don't let your mouse hit the webmines!</h1></center>
     <center><button onclick="refresh()">Reset</button></center>
+    <center><h2 id="stop"></h2</center>
+    
     <img id="img1" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
     <img id="img2" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
      <img id="img3" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
@@ -41,6 +42,7 @@
     <img id="finish" onmouseenter="alerter()" src="https://cdn3.iconfinder.com/data/icons/sports-games-4/24/Finish-512.png" alt="The end" title="The end"/>
   </body>
   <script>
+    
     let final = 0;
     function hoverFunc() {
       final += 1;
@@ -79,10 +81,15 @@
     
       doc.style.backgroundColor = color[i];
         i = (i + 1) % color.length;
-      
     }
     setInterval(shift, 750);
     
- 
+var myListener = function () {alert("You moved on red light! Womp womp.")};
+    
+    let stopper = document.getElementById("body").style.backgroundColor;
+    document.getElementById("stop").innerHTML = stopper;
+    if (stopper === "red") {
+      document.addEventListener('mousemove', myListener, false);
+    }
    </script>
 </html>
