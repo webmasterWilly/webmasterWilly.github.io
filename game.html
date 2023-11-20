@@ -12,6 +12,9 @@
       border: 2px solid black;
       border-radius: 15px;
     }
+    button:hover {
+      cursor: default;
+    }
     img:hover {
       cursor: url('deadMiceMan.png'), auto;
     }
@@ -27,7 +30,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
   <body id="back">
-    <center><h1>Don't let your mouse hit the landmines!</h1></center>
+    <center><h1>Don't let your mouse hit the webmines!</h1></center>
     <center><button onclick="refresh()">Reset</button></center>
     <img id="img1" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
     <img id="img2" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
@@ -64,7 +67,7 @@
     randImg(element6);
     
     function alerter() {
-      alert("You touched " + final + " landmines on your journey!");
+      alert("You touched " + final + " webmines on your journey!");
     }
     function refresh() {
       location.reload();
