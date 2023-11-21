@@ -88,11 +88,9 @@ var myListener = function () {
   alert("You moved on red light! Womp womp.");
   final += 1;
 };
-    
+     document.addEventListener('mousemove', myListener, true);
     let stopper = document.getElementById("h1").style.backgroundColor;
     document.getElementById("stop").innerHTML = stopper;
-    if (stopper === "purple") {
-      document.addEventListener('mousemove', myListener, true);
-    }
+   
    </script>
 </html>
