@@ -85,9 +85,12 @@
         i = (i + 1) % color.length;
     }
     setInterval(shift, 750);
-document.addEventListener("mousemove", function(){
-  document.getElementById("stop").innerHTML = "You have moved.";
+    
+document.addEventListener("mousemove", function bob(){
+  document.getElementById("stop").innerHTML = "You moved on red! Womp womp.";
 });
 
+setInterval(bob, 750);
+    
    </script>
 </html>
