@@ -34,7 +34,7 @@
     <center><progress value="0" max="4" id="stop"></progress></center>
     
     <img id="img1" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
-    <marquee direction="right"><img onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/></marquee>
+    <marquee direction="right"><img id="img9" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/></marquee>
     <img id="img2" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
      <img id="img3" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
      <img id="img4" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
@@ -74,6 +74,8 @@
     randImg(element7);
     let element8 = document.getElementById("img8");
     randImg(element8);
+    let element9 = document.getElementById("img9");
+    randImg(element9);
     
     function alerter() {
       alert("You touched " + final + " webmines on your journey!");
