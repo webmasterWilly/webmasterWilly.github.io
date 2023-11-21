@@ -85,14 +85,9 @@
         i = (i + 1) % color.length;
     }
     setInterval(shift, 750);
-document.addEventListener("mousemove", dead);
-
-    let stopper = document.getElementById("back").backgroundColor;
-    function dead() {
-      if (stopper === "red") {
-        alert("You moved on a red light! Womp womp");
-      }
-    }
+document.addEventListener("mousemove", function(){
+  document.getElementById("stop").innerHTML = "You have moved.";
+});
 
    </script>
 </html>
