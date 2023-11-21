@@ -74,7 +74,10 @@
     function refresh() {
       location.reload();
     }
-    let i = 0;
+   
+document.addEventListener("mousemove", dead());
+    
+     let i = 0;
     let color = ["green", "yellow", "red"];
     function shift() {
       var doc = document.getElementById("back");
@@ -83,17 +86,11 @@
         i = (i + 1) % color.length;
     }
     setInterval(shift, 750);
-    
-var myListener = function () {
-  alert("You moved on red light! Womp womp.");
-  final += 1;
-};
-     
-    let stopper = document.getElementById("no").style.backgroundColor;
-    document.getElementById("stop").innerHTML = stopper;
-   let stopper2 = document.getElementById("stop").innerHTML;
-    if (stopper2 === "purple") {
-      document.addEventListener('mousemove', myListener, true);
+
+    function dead() {
+      if (color[i] === "red") {
+        alert("You moved on a red light! Womp womp.);
+      }
     }
    </script>
 </html>
