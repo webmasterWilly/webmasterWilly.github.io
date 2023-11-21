@@ -31,7 +31,7 @@
   <body id="back">
     <center><h1>Don't let your mouse hit the webmines!</h1></center>
     <center><button onclick="refresh()">Reset</button></center>
-    <center><progress value="0" max="30" id="stop"></progress></center>
+    <center><progress value="0" max="300" id="stop"></progress></center>
     
     <img id="img1" onmouseenter="hoverFunc()" src="mine3.png" alt="landmine" title="landmine!!!"/>
     <img id="img2" onmouseenter="hoverFunc()" src="mine3.png" alt="landmine" title="landmine!!!"/>
@@ -83,7 +83,7 @@
     }
     
     let i = 0;
-    let color = ["green", "yellow", "red"];
+    let color = ["#00008B", "#2E008B"];
     function shift() {
       var doc = document.getElementById("back");
     
@@ -92,16 +92,16 @@
     }
     setInterval(shift, 750);
 
-    let countdown = 30;
+    let countdown = 300;
     var downloadTimer = setInterval(function(){
   if(countdown <= 0){
     clearInterval(downloadTimer);
     alert("You ran out of time! Womp womp");
     final += 1;
   }
-  document.getElementById("stop").value = 30 - countdown;
+  document.getElementById("stop").value = 300 - countdown;
   countdown -= 1;
-}, 100);
+}, 10);
     
    </script>
 </html>
