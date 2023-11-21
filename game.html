@@ -28,7 +28,7 @@
   <head>
     <title>Web 2 Game</title>
   </head>
-  <body id="back">
+  <body id="back" onmouseleave="out()">
     <center><h1>Don't let your mouse hit the webmines!</h1></center>
     <center><button onclick="refresh()">Reset</button></center>
     <center><progress value="0" max="300" id="stop"></progress></center>
@@ -81,7 +81,11 @@
     function refresh() {
       location.reload();
     }
-    
+
+    function out() {
+      alert("Out of bounds!");
+      final += 1;
+    }
     let i = 0;
     let color = ["#568203", "#018749"];
     function shift() {
