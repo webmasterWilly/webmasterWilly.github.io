@@ -31,7 +31,7 @@
   <body id="back">
     <center><h1 id="no">Don't let your mouse hit the webmines!</h1></center>
     <center><button onclick="refresh()">Reset</button></center>
-    <center><h2 id="stop"></h2</center>
+    <center><h2 id="stop"></h2></center>
     
     <img id="img1" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
     <img id="img2" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
@@ -88,9 +88,12 @@ var myListener = function () {
   alert("You moved on red light! Womp womp.");
   final += 1;
 };
-     document.addEventListener('mousemove', myListener, true);
+     
     let stopper = document.getElementById("no").style.backgroundColor;
     document.getElementById("stop").innerHTML = stopper;
-   
+   let stopper2 = document.getElementById("stop").innerHTML;
+    if (stopper2 === "purple") {
+      document.addEventListener('mousemove', myListener, true);
+    }
    </script>
 </html>
