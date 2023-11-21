@@ -31,7 +31,7 @@
   <body id="back">
     <center><h1>Don't let your mouse hit the webmines!</h1></center>
     <center><button onclick="refresh()">Reset</button></center>
-    <center><h2 id="stop"></h2></center>
+    <center><progress value="0" max="10" id="stop"></progress></center>
     
     <img id="img1" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
     <img id="img2" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
@@ -39,6 +39,7 @@
      <img id="img4" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
      <img id="img5" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
      <img id="img6" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
+ <img id="img7" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
     <img id="finish" onmouseenter="alerter()" src="https://cdn3.iconfinder.com/data/icons/sports-games-4/24/Finish-512.png" alt="The end" title="The end"/>
   </body>
   <script>
@@ -67,6 +68,8 @@
     randImg(element5);
     let element6 = document.getElementById("img6");
     randImg(element6);
+    let element7 = document.getElementById("img7");
+    randImg(element7);
     
     function alerter() {
       alert("You touched " + final + " webmines on your journey!");
@@ -85,22 +88,15 @@
         i = (i + 1) % color.length;
     }
     setInterval(shift, 750);
+
+    let countdown = 10;
+    var downloadTimer = setInterval(function(){
+  if(timeleft <= 0){
+    clearInterval(downloadTimer);
+  }
+  document.getElementById("stop").value = 10 - countdown;
+  timeleft -= 1;
+}, 1000);
     
-    document.addEventListener("mousemove", function bob(){
-  alert("you moved on a red light! Womp womp");
-});
-    
-let z = 0;
-    let color2 = ["green", "yellow", "red"];
-    function violate() 
-    document.getElementById("stop").innerHTML = color2[z];
-      var heading = document.getElementById("stop");
-      heading.style.color = color2[z];
-      z = (z + 1) % color2.length;
-      if (color[z] === "red") {
-        bob();
-      }
-    }
-    setInterval(violate, 750);
    </script>
 </html>
