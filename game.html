@@ -31,15 +31,17 @@
   <body id="back">
     <center><h1>Don't let your mouse hit the webmines!</h1></center>
     <center><button onclick="refresh()">Reset</button></center>
-    <center><progress value="0" max="6" id="stop"></progress></center>
+    <center><progress value="0" max="4" id="stop"></progress></center>
     
     <img id="img1" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
+    <marquee direction="right"><img onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/></marquee>
     <img id="img2" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
      <img id="img3" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
      <img id="img4" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
      <img id="img5" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
      <img id="img6" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
- <img id="img7" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
+      <img id="img7" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
+ <img id="img8" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/>
     <img id="finish" onmouseenter="alerter()" src="https://cdn3.iconfinder.com/data/icons/sports-games-4/24/Finish-512.png" alt="The end" title="The end"/>
   </body>
   <script>
@@ -70,6 +72,8 @@
     randImg(element6);
     let element7 = document.getElementById("img7");
     randImg(element7);
+    let element8 = document.getElementById("img8");
+    randImg(element8);
     
     function alerter() {
       alert("You touched " + final + " webmines on your journey!");
@@ -89,13 +93,14 @@
     }
     setInterval(shift, 750);
 
-    let countdown = 6;
+    let countdown = 4;
     var downloadTimer = setInterval(function(){
   if(countdown <= 0){
     clearInterval(downloadTimer);
-    alert("You ran out of time! Womp womp")
+    alert("You ran out of time! Womp womp");
+    final += 1;
   }
-  document.getElementById("stop").value = 6 - countdown;
+  document.getElementById("stop").value = 4 - countdown;
   countdown -= 1;
 }, 1000);
     
