@@ -7,13 +7,16 @@
     }
     h1 {
       color: white;
-      background-color: deeppink;
+      background-color: purple;
+    }
+    button {
+      border: 2px solid black;
+      border-radius: 15px;
     }
     #finish {
       width: 100px;
       height: 100px;
-      float: right;
-      margin-top: 300px;
+      float: none;
     }
    
       
@@ -23,23 +26,52 @@
     
   </head>
   <body>
+    <!-- text -->
     <center><h1>Don't let your mouse hit the landmines!</h1></center>
+    <center><button onclick="reset()">Reset</button></center>
+     <center><progress value="0" max="300" id="stop"></progress></center>
+    <!-- mines -->
     <marquee direction="right"><img id="img1" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/></marquee>
-    <marquee direction="up"><img id="img2" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/></marquee>
+    <marquee direction="left"><img id="img2" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/></marquee>
      <marquee direction="left"<img id="img3" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/></marquee>
-     <marquee direction="down"><img id="img4" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/></marquee>
+     <marquee direction="left"><img id="img4" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/></marquee>
      <marquee direction="right"><img id="img5" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/></marquee>
-       <marquee direction="up"><img id="img5" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/></marquee>
-       
-    <img id="finish" onmouseenter="alerter()" src="https://cdn3.iconfinder.com/data/icons/sports-games-4/24/Finish-512.png" alt="The end" title="The end"/>
+       <marquee direction="left"><img id="img5" onmouseenter="hoverFunc()" src="mine2.png" alt="landmine" title="landmine!!!"/></marquee>
+       <!-- finish line -->
+    <center><img id="finish" onmouseenter="alerter()" src="https://cdn3.iconfinder.com/data/icons/sports-games-4/24/Finish-512.png" alt="The end" title="The end"/></center>
   </body>
   <script>
     let final = 0;
     function hoverFunc() {
       final += 1;
     }
+    function reset() {
+      location.reload();
+    }
     function alerter() {
       alert("You touched " + final + " landmines on your journey!");
     }
+
+     let countdown = 300;
+    var downloadTimer = setInterval(function(){
+  if(countdown <= 0){
+    clearInterval(downloadTimer);
+    alert("You ran out of time! Womp womp");
+    final += 1;
+  }
+  document.getElementById("stop").value = 300 - countdown;
+  countdown -= 1;
+}, 10);
+
+document.addEventListener("mouseleave", function(event){
+
+  if(event.clientY <= 0 || event.clientX <= 0 || (event.clientX >= window.innerWidth || event.clientY >= window.innerHeight))
+  {
+
+  alert("Out of Bounds!");
+    final += 1;
+
+  }
+});
   </script>
 </html>
