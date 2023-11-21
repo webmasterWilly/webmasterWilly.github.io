@@ -29,7 +29,7 @@
     <title>Web 2 Game</title>
   </head>
   <body id="back">
-    <center><h1 id="no">Don't let your mouse hit the webmines!</h1></center>
+    <center><h1>Don't let your mouse hit the webmines!</h1></center>
     <center><button onclick="refresh()">Reset</button></center>
     <center><h2 id="stop"></h2></center>
     
@@ -71,13 +71,12 @@
     function alerter() {
       alert("You touched " + final + " webmines on your journey!");
     }
+    
     function refresh() {
       location.reload();
     }
-   
-document.addEventListener("mousemove", dead());
     
-     let i = 0;
+    let i = 0;
     let color = ["green", "yellow", "red"];
     function shift() {
       var doc = document.getElementById("back");
@@ -86,11 +85,14 @@ document.addEventListener("mousemove", dead());
         i = (i + 1) % color.length;
     }
     setInterval(shift, 750);
+document.addEventListener("mousemove", dead);
 
+    let stopper = document.getElementById("back").backgroundColor;
     function dead() {
-      if (color[i] === "red") {
-        alert("You moved on a red light! Womp womp.);
+      if (stopper === "red") {
+        alert("You moved on a red light! Womp womp");
       }
     }
+
    </script>
 </html>
