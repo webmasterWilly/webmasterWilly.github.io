@@ -84,7 +84,10 @@
     }
     setInterval(shift, 750);
     
-var myListener = function () {alert("You moved on red light! Womp womp.")};
+var myListener = function () {
+  alert("You moved on red light! Womp womp.");
+  z += 1;
+};
     
     let stopper = document.getElementById("body").style.backgroundColor;
     document.getElementById("stop").innerHTML = stopper;
