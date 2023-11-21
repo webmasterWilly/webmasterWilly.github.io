@@ -92,7 +92,7 @@ var myListener = function () {
     let stopper = document.getElementById("body").style.backgroundColor;
     document.getElementById("stop").innerHTML = stopper;
     if (stopper === "red") {
-      document.addEventListener('mousemove', myListener, false);
+      document.addEventListener('mousemove', myListener, true);
     }
    </script>
 </html>
