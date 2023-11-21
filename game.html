@@ -28,7 +28,7 @@
   <head>
     <title>Web 2 Game</title>
   </head>
-  <body id="back" onmouseleave="out()">
+  <body id="back">
     <center><h1>Don't let your mouse hit the webmines!</h1></center>
     <center><button onclick="refresh()">Reset</button></center>
     <center><progress value="0" max="300" id="stop"></progress></center>
@@ -82,10 +82,6 @@
       location.reload();
     }
 
-    function out() {
-      alert("Out of bounds!");
-      final += 1;
-    }
     let i = 0;
     let color = ["#568203", "#018749"];
     function shift() {
@@ -106,6 +102,17 @@
   document.getElementById("stop").value = 300 - countdown;
   countdown -= 1;
 }, 10);
+
+document.addEventListener("mouseleave", function(event){
+
+  if(event.clientY <= 0 || event.clientX <= 0 || (event.clientX >= window.innerWidth || event.clientY >= window.innerHeight))
+  {
+
+  alert("Out of Bounds!");
+    final += 1;
+
+  }
+});
     
    </script>
 </html>
