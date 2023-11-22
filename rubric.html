@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
   <style>
+    html {
+      background-color: turquoise;
+    }
     h1 {
       color: white;
     }
@@ -17,22 +20,20 @@
       border-radius: 15px;
       mix-blend-mode: overlay;
     }
-    body.is-transitioned {
+    embed.is-transitioned {
       animation: fade-in 2s forwards;
-      background-color: turquoise;
       opacity: 0;
-      transform: translateX(50px);
+      transform: translateY(50vh);
     }
     @keyframes fade-in {
       from {
-        background-color: turquoise;
         opacity: 0;
-        transform: translateX(50px);
+        transform: translateY(50vh);
       }
       to {
         background-color: turquoise;
         opacity: 1;
-        transform: translateX(0);
+        transform: translateY(0);
       }
     }
   </style>
