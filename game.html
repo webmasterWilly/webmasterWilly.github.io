@@ -21,8 +21,6 @@
     #finish {
       width: 100px;
       height: 100px;
-      float: right;
-      margin-top: 375px;
     }
   </style>
   <head>
@@ -58,6 +56,12 @@
       el.style.top = randInt(0, 750) + "px";
       el.style.left = randInt(0, 1500) + "px";
     }
+    function randImg2(el2) {
+      el2.style.position = "absolute";
+      el2.style.top = randInt(0, 500) + "px";
+      el2.style.left = randInt(0, 1000) + "px";
+    }
+    setInterval(randImg2, 2000);
     let element = document.getElementById("img1");
     randImg(element);
     let element2 = document.getElementById("img2");
@@ -77,7 +81,7 @@
     let element10 = document.getElementById("img10");
     randImg(element10);
     let element9 = document.getElementById("finish");
-    randImg(element9);
+    randImg2(element9);
     
     function alerter() {
       alert("You touched " + final + " webmines on your journey!");
