@@ -41,6 +41,7 @@
      <img id="img6" onmouseenter="hoverFunc()" src="mine3.png" alt="landmine" title="landmine!!!"/>
       <img id="img7" onmouseenter="hoverFunc()" src="mine3.png" alt="landmine" title="landmine!!!"/>
  <img id="img8" onmouseenter="hoverFunc()" src="mine3.png" alt="landmine" title="landmine!!!"/>
+     <img id="img10" onmouseenter="hoverFunc()" src="mine3.png" alt="landmine" title="landmine!!!"/>
     <img id="finish" onmouseenter="alerter()" src="https://cdn3.iconfinder.com/data/icons/sports-games-4/24/Finish-512.png" alt="The end" title="The end"/>
   </body>
   <script>
@@ -73,6 +74,10 @@
     randImg(element7);
     let element8 = document.getElementById("img8");
     randImg(element8);
+    let element10 = document.getElementById("img10");
+    randImg(element10);
+    let element9 = document.getElementById("finish");
+    randImg(element9);
     
     function alerter() {
       alert("You touched " + final + " webmines on your journey!");
@@ -98,7 +103,7 @@
   if(countdown <= 0){
     clearInterval(downloadTimer);
     alert("You ran out of time! Womp womp");
-    final += 1;
+  location.reload();
   }
   document.getElementById("stop").value = 300 - countdown;
   countdown -= 1;
