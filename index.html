@@ -34,13 +34,26 @@
     background-color: #FFFDD0;
     border-radius: 15px;
   }
+  .left:hover {
+    -webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
+  }
+   .right:hover {
+    -webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
+  }
+  .up:hover {
+    transform: translateY(-20px);
+  }
 </style>
   <head>
     <title>Web 2 Website</title>
     <link rel="icon" type="image/x-icon" href="https://patch.com/img/cdn20/users/3069/20230930/100706/styles/patch_image/public/jala-pic___30100124378.jpg">
   </head>
   <body>
-    <center><a href="game.html"><img src="upArrow2.png" alt="up arrow" title="up arrow"/></a></center>
+    <center><a href="game.html"><img class="up" src="upArrow2.png" alt="up arrow" title="up arrow"/></a></center>
     <center><a href="home.html"><img class="left" src="left2.png" alt="left arrow" title="left arrow"/></a></center>
     <center><a href="rubric.html"><img class="right" src="right2.png" alt="right arrow" title="right arrow"/></a></center>
     <div class="main">
