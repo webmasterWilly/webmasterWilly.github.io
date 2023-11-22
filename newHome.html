@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<style>
+  body {
+    background: linear-gradient(45deg, green, light green, gold);
+  }
+  h1 {
+    color: white;
+  }
+  h2 {
+    color: white;
+  }
+  .main {
+    margin-top: 50%;
+  }
+</style>
+  <head>
+    <title>Web 2 Website</title>
+    <link rel="icon" type="image/x-icon" href="https://patch.com/img/cdn20/users/3069/20230930/100706/styles/patch_image/public/jala-pic___30100124378.jpg">
+  </head>
+  <body>
+    <div class="main">
+    <center><h1>This is the official Web Design 2 website.</h1></center>
+    <center><h2>Click up arrow for game, left arrow for your sites, and right arrow for rubric.</h2></center>
+    </div>
+  </body>
+  <script>
+    document.onkeydown = (e) => {
+  e = e || window.event;
+  if (e.keyCode === 38) {
+    window.open("game.html");
+  } else if (e.keyCode === 40) {
+  alert("No page for the down arrow yet");
+  } else if (e.keyCode === 37) {
+    window.open("home.html");
+  } else if (e.keyCode === 39) {
+    window.open("rubric.html");
+  }
+};
+  </script>
+</html>
