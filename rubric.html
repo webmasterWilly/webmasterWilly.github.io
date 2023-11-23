@@ -35,4 +35,12 @@
     <center><embed src="updatelog.pdf" width="700" height="600"></center>
     </div>
   </body>
+  <script>
+    document.onKeyDown = (e) => {
+   e = e || window.event;
+   if (e.keyCode === 37) {
+    window.open("index.html", "_self");
+   }
+  };
+  </script>
 </html>
