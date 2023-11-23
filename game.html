@@ -43,6 +43,12 @@
     <img id="finish" onmouseenter="alerter()" src="https://cdn3.iconfinder.com/data/icons/sports-games-4/24/Finish-512.png" alt="The end" title="The end"/>
   </body>
   <script>
+    document.onKeyDown = (e) => {
+   e = e || window.event;
+   if (e.keyCode === 40) {
+    window.open("index.html", "_self");
+   }
+  };
     
     let final = 0;
     function hoverFunc() {
