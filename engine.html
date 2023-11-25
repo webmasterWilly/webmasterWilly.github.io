@@ -1,29 +1,67 @@
 <!DOCTYPE html>
 <html>
+  <style>
+    html {
+      background-color: black;
+    }
+    #search {
+      margin-top: 100px;
+      
+    }
+    #button {
+      width: 70px;
+      heigt: 55px;
+      background-color: yellow;
+      color: black;
+      text-align: center;
+      border-radius: 15px;
+      animation-name: extend;
+      animation-duration: 1s;
+    }
+    #searchBar {
+      border-radius: 15px;
+      margin-right: 30px;
+    }
+    @keyframes extend {
+      from {
+        width: 70px;
+        height: 55px;
+      }
+      to {
+        width: 90px;
+        height: 75px;
+      }
+    }
+  </style>
   <head>
+    <!-- meta -->
     <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="author" content="Will OKeefe">
-    <!-- pyscript links -->
-    <link rel="stylesheet" href="https://pyscript.net/releases/2023.11.1/core.css" />
-<script type="module" src="https://pyscript.net/releases/2023.11.1/core.js"></script>
+ 
+    <title>CHS Search</title>
   </head>
   <body>
-  <py-config>
-                plugins = [
-                  "https://pyscript.net/latest/plugins/python/py_tutor.py"
-                ]
-            </py-config>
-
-            <section class="pyscript">
-                Hello world! <br>
-                This is the current date and time, as computed by Python:
-                <py-script>
-                    from datetime import datetime
-                    now = datetime.now()
-                    display(now.strftime("%m/%d/%Y, %H:%M:%S"))
-                </py-script>
-            </section>
+  <div id="search">
+    <input type="search" id="searchBar" placeholder="Explore here...">
+    <button id="button">Search</button>
+  </div>
   </body>
+  <script>
+    let input = document.getElementById('searchBar').value;
+    function findKeyword(goal) {
+      var x = "";
+      for (int i = 0; i < input.length; i++) {
+        i = input.substring(i, goal.length);
+        if (i === goal) {
+          return true;
+        }
+        else {
+          continue;
+        }
+      }
+      
+    }
+  </script>
 </html>
