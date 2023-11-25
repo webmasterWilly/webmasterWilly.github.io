@@ -8,9 +8,13 @@
       color: blue;
       font-family: 'Courier New', monospace;
     }
+    h2 {
+      color: blue;
+      font-family: 'Courier New', monospace;
+    }
     #search {
       margin-top: 100px;
-      
+      margin-bottom: 100px;
     }
     #button {
       width: 90px;
@@ -48,9 +52,14 @@
     <input type="search" id="searchBar" placeholder="Explore here...">
     <button id="button"><b>Search</b></button>
   </div></center>
+    <center><h2 id="result"></h2></center>
   </body>
   <script>
+    // get user input
     let input = document.getElementById('searchBar').value;
+    // display user input
+    document.getElementById('result').innerHTML = input + ":";
+// find keywords
     function findKeyword(goal) {
       var x = "";
       for (int i = 0; i < input.length; i++) {
