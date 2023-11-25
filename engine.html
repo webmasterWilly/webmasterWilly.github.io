@@ -4,6 +4,10 @@
     html {
       background-color: black;
     }
+    h1 {
+      color: blue;
+      font-family: 'Courier New', monospace;
+    }
     #search {
       margin-top: 100px;
       
@@ -15,11 +19,12 @@
       color: black;
       text-align: center;
       border-radius: 25px;
-      transition: width 1s, height 1s;
+      transition: width 250ms, height 250ms, background-color 500ms;
     }
     #button:hover {
-      width: 115px;
-      height: 75px;
+      width: 100px;
+      height: 65px;
+      background-color: #FFFFE0;
     }
     #searchBar {
       border-radius: 25px;
@@ -38,9 +43,10 @@
     <title>CHS Search</title>
   </head>
   <body>
+    <center><h1>Web Design Search Engine</h1></center>
   <center><div id="search">
     <input type="search" id="searchBar" placeholder="Explore here...">
-    <button id="button">Search</button>
+    <button id="button"><b>Search</b></button>
   </div></center>
   </body>
   <script>
