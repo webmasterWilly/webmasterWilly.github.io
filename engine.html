@@ -9,33 +9,23 @@
       
     }
     #button {
-      width: 70px;
+      width: 90px;
       height: 55px;
       background-color: yellow;
       color: black;
       text-align: center;
-      border-radius: 15px;
-      
+      border-radius: 25px;
+      transition: width 1s, height 1s;
     }
     #button:hover {
-      animation-name: extend;
-      animation-duration: 1s;
+      width: 115px;
+      height: 75px;
     }
     #searchBar {
-      border-radius: 15px;
+      border-radius: 25px;
       margin-right: 10px;
-      width: 140px;
+      width: 225px;
       height: 50px;
-    }
-    @keyframes extend {
-      from {
-        width: 70px;
-        height: 55px;
-      }
-      to {
-        width: 90px;
-        height: 75px;
-      }
     }
   </style>
   <head>
