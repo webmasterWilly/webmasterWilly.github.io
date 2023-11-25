@@ -8,13 +8,13 @@
       color: blue;
       font-family: 'Courier New', monospace;
     }
-    h2 {
+    h3 {
       color: blue;
       font-family: 'Courier New', monospace;
     }
     #search {
-      margin-top: 100px;
-      margin-bottom: 100px;
+      margin-top: 50px;
+      margin-bottom: 25px;
     }
     #button {
       width: 90px;
@@ -49,19 +49,17 @@
   <body>
     <center><h1>Web Design Search Engine</h1></center>
   <center><div id="search">
-    <input type="search" id="searchBar" value="Search here">
+    <input type="search" id="searchBar" placeholder="Explore here..." value="">
     <button id="button" onclick="display()"><b>Search</b></button>
   </div></center>
-    <center><h2 id="result"></h2></center>
+    <center><h3 id="result"></h3></center>
   </body>
   <script>
-   
-    
-   
     function display() {
       var displayer = document.getElementById("searchBar").value;
     document.getElementById("result").innerHTML = displayer + ":";
     }
+    
 
    
   </script>
