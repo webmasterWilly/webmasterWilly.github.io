@@ -36,6 +36,11 @@
       width: 225px;
       height: 50px;
     }
+    #w3 {
+      display: none;
+      text-decoration: none;
+      color: yellow;
+    }
   </style>
   <head>
     <!-- meta -->
@@ -53,13 +58,24 @@
     <button id="button" onclick="display()"><b>Search</b></button>
   </div></center>
     <center><h3 id="result"></h3></center>
+    <h3 id="w3"><a href="https://www.w3schools.com/html/default.asp" target="_blank">W3schools</a></h3>
   </body>
   <script>
+     let displayer = document.getElementById("searchBar").value;
+    
     function display() {
-      var displayer = document.getElementById("searchBar").value;
-    document.getElementById("result").innerHTML = displayer + ":";
+     document.getElementById("result").innerHTML = displayer + ":";
     }
     
+    let webList = [div, syntax];
+    
+    function findSite() {
+      for (int i = 0; i < webList.length; i++) {
+        if (displayer === webList[i]) {
+          document.getElementById("w3").style.display = "block";
+        }
+      }
+    }
 
    
   </script>
