@@ -68,13 +68,15 @@
      document.getElementById("result").innerHTML = displayer + ":";
     }
 
-     let siteList = [div,
-                    syntax,
-                    images];
+     
 
     function findSite() {
+      var siteList = [div,
+                    syntax,
+                    images];
       var displayer2 = document.getElementById("searchBar").value;
-      if (displayer2 === siteList[0]) {
+     var decide = displayer2 === siteList[0];
+      if (decide == true) {
         document.getElementById("w3").style.display = "block";
       }
     }
