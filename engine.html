@@ -42,6 +42,12 @@
       text-decoration: none;
       color: yellow;
     }
+    #noans {
+      display: none;
+      font-family: 'Courier New', monospace;
+      text-decoration: none;
+      color: yellow;
+    }
   </style>
   <head>
     <!-- meta -->
@@ -60,6 +66,7 @@
   </div></center>
     <center><h3 id="result"></h3></center>
     <h3 id="w3"><a href="https://www.w3schools.com/html/default.asp" target="_blank">W3schools</a></h3>
+    <h3 id="noans">There is no results</h3>
   </body>
   <script>
     
@@ -75,12 +82,12 @@
                     syntax,
                     images];
       var displayer2 = document.getElementById("searchBar").value;
-     var decide = displayer2 === siteList[0];
-      if (decide == true) {
-        console.log("w3schools");
+   var result = displayer2.localeCompare(siteList[0]);
+      if (result == 0) {
+        document.getElementById("w3").style.display = "block";
       }
       else {
-        console.log("Nothing");
+        document.getElementById("noans").stylr.display = "block";
       }
     }
     
