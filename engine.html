@@ -38,6 +38,7 @@
     }
     #w3 {
       display: none;
+      font-family: 'Courier New', monospace;
       text-decoration: none;
       color: yellow;
     }
@@ -61,14 +62,22 @@
     <h3 id="w3"><a href="https://www.w3schools.com/html/default.asp" target="_blank">W3schools</a></h3>
   </body>
   <script>
-     let displayer = document.getElementById("searchBar").value;
     
     function display() {
+      var displayer = document.getElementById("searchBar").value;
      document.getElementById("result").innerHTML = displayer + ":";
     }
-    
-   
 
-   
+     let siteList = [div,
+                    syntax,
+                    images];
+
+    function findSite() {
+      var displayer2 = document.getElementById("searchBar").value;
+      if (displayer2 === siteList[0]) {
+        document.getElementById("w3").style.display = "block";
+      }
+    }
+    
   </script>
 </html>
