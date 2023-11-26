@@ -71,13 +71,16 @@
      
 
     function findSite() {
-      var siteList = [div,
+      const siteList = [div,
                     syntax,
                     images];
       var displayer2 = document.getElementById("searchBar").value;
      var decide = displayer2 === siteList[0];
       if (decide == true) {
-        document.getElementById("w3").style.display = "block";
+        console.log("w3schools");
+      }
+      else {
+        console.log("Nothing");
       }
     }
     
