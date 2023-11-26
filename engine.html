@@ -65,7 +65,9 @@
     <button id="button" onclick="display(); findSite()"><b>Search</b></button>
   </div></center>
     <center><h3 id="result"></h3></center>
+    <div class="all" id="div">
     <h3 id="w3"><a href="https://www.w3schools.com/html/default.asp" target="_blank">W3schools</a></h3>
+    </div>
     <h3 id="noans">There is no results</h3>
   </body>
   <script>
@@ -81,14 +83,17 @@
       const siteList = ["div",
                     "syntax",
                     "images"];
+      
       var displayer2 = document.getElementById("searchBar").value;
-   var result = displayer2.localeCompare(siteList[0]);
-      if (result == 0) {
-        document.getElementById("w3").style.display = "block";
+      let result;
+      for (int i = 0; i < siteList.length; i++) {
+        result = displayer2.localeCompare(siteList[i]) 
+        if (result == 0) {
+          document.getElementById(siteList[i]).style.display = "block";
+        }
+           
       }
-      else {
-        document.getElementById("noans").stylr.display = "block";
-      }
+    
     }
     
   </script>
