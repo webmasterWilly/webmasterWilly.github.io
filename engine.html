@@ -67,8 +67,8 @@
     <center><h3 id="result"></h3></center>
     <div class="all" id="div">
     <h3 id="w3"><a href="https://www.w3schools.com/html/default.asp" target="_blank">W3schools</a></h3>
-    </div>
-    <h3 id="noans">There is no results</h3>
+  </div>
+     <h3 id="noans">There are no results</h3>
   </body>
   <script>
     
@@ -80,21 +80,26 @@
      
 
     function findSite() {
-      const siteList = ["div",
+      const w3List = ["div",
                     "syntax",
                     "images"];
       
       var displayer2 = document.getElementById("searchBar").value;
       let result = 0;
-      for (int i = 0; i < siteList.length; i++) {
-        result = displayer2.localeCompare(siteList[i]) 
+      var j = 0; // var to be used when there are no results
+      for (let i = 0; i < w3List.length; i++) {
+        result = displayer2.localeCompare(w3List[i]) 
         if (result == 0) {
           document.getElementById("div").style.display = "block";
         }
-           
+        else {
+          j += 1; // add 1 to j every time there is no match
+        }       
       }
-    
-    }
+      if (j == w3List.length) // if j equals the length of the list then there are no matches {
+        document.getElementById("noans").style.display = "block";
+      }
+      }
     
   </script>
 </html>
