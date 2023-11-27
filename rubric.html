@@ -36,11 +36,11 @@
     </div>
   </body>
   <script>
-    document.onKeyDown = (e) => {
-   e = e || window.event;
-   if (e.keyCode === 37) {
-    window.open("index.html", "_self");
-   }
-  };
+   document.onkeydown = (e) => {
+  e = e || window.event;
+  if (e.keyCode === 37) {
+    window.open("index.html");
+  } 
+};
   </script>
 </html>
