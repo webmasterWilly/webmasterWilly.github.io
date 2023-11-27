@@ -74,6 +74,13 @@
      <center><h3 id="noans">There are no results, search again.</h3></center>
   </body>
   <script>
+document.onkeydown = (e) => {
+  e = e || window.event;
+  if (e.keyCode === 38) {
+    window.open("index.html");
+  } 
+};
+
     
     function display() {
       var displayer = document.getElementById("searchBar").value;
@@ -86,10 +93,12 @@
       const w3List = ["div",
                     "syntax",
                     "images"];
+      let real = 0; // var used to read through statement
       
       var displayer2 = document.getElementById("searchBar").value;
       let result = 0;
       var j = 0; // var to be used when there are no results
+      while (real < displayer2.length) {
       for (let i = 0; i < w3List.length; i++) {
         result = displayer2.localeCompare(w3List[i]); 
         if (result == 0) {
@@ -103,6 +112,8 @@
        document.getElementById("all").style.display = "none";
         document.getElementById("noans").style.display = "block";
       }
+        real += 3;
+    }
     }
     
       
