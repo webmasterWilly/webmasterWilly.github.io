@@ -88,7 +88,7 @@
       let result = 0;
       var j = 0; // var to be used when there are no results
       for (let i = 0; i < w3List.length; i++) {
-        result = displayer2.localeCompare(w3List[i]) 
+        result = displayer2.localeCompare(w3List[i]); 
         if (result == 0) {
           document.getElementById("div").style.display = "block";
         }
@@ -96,10 +96,12 @@
           j += 1; // add 1 to j every time there is no match
         }       
       }
-      if (j == w3List.length) // if j equals the length of the list then there are no matches {
+      if (j == w3List.length) {
         document.getElementById("noans").style.display = "block";
       }
-      }
+    }
+    
+      
     
   </script>
 </html>
