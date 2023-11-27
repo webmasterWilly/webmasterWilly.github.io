@@ -36,7 +36,7 @@
       width: 225px;
       height: 50px;
     }
-    #w3 {
+    #diver {
       display: none;
       font-family: 'Courier New', monospace;
       text-decoration: none;
@@ -65,10 +65,11 @@
     <button id="button" onclick="display(); findSite()"><b>Search</b></button>
   </div></center>
     <center><h3 id="result"></h3></center>
-    <center><div class="all" id="div">
-    <h3 id="w3"><a href="https://www.w3schools.com/html/default.asp" target="_blank">W3schools</a></h3>
+    <center><div class="all" id="diver">
+    <h3><a href="https://www.w3schools.com/html/default.asp" target="_blank">W3schools</a></h3>
+    <h3><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div" target="_blank">MDN Docs</a></h3>
   </div></center>
-     <h3 id="noans">There are no results</h3>
+     <center><h3 id="noans">There are no results, search again.</h3></center>
   </body>
   <script>
     
@@ -90,7 +91,7 @@
       for (let i = 0; i < w3List.length; i++) {
         result = displayer2.localeCompare(w3List[i]); 
         if (result == 0) {
-          document.getElementById("w3").style.display = "block";
+          document.getElementById("diver").style.display = "block";
         }
         else {
           j += 1; // add 1 to j every time there is no match
