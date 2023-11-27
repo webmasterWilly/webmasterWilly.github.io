@@ -65,9 +65,9 @@
     <button id="button" onclick="display(); findSite()"><b>Search</b></button>
   </div></center>
     <center><h3 id="result"></h3></center>
-    <div class="all" id="div">
+    <center><div class="all" id="div">
     <h3 id="w3"><a href="https://www.w3schools.com/html/default.asp" target="_blank">W3schools</a></h3>
-  </div>
+  </div></center>
      <h3 id="noans">There are no results</h3>
   </body>
   <script>
@@ -80,7 +80,6 @@
      
 
     function findSite() {
-        document.getElementById("w3").style.display = "block";
       const w3List = ["div",
                     "syntax",
                     "images"];
@@ -91,7 +90,7 @@
       for (let i = 0; i < w3List.length; i++) {
         result = displayer2.localeCompare(w3List[i]); 
         if (result == 0) {
-          document.getElementById("div").style.display = "block";
+          document.getElementById("w3").style.display = "block";
         }
         else {
           j += 1; // add 1 to j every time there is no match
