@@ -65,10 +65,12 @@
     <button id="button" onclick="display(); findSite()"><b>Search</b></button>
   </div></center>
     <center><h3 id="result"></h3></center>
-    <center><div class="all" id="diver">
+    <div id="all">
+    <center><div id="diver">
     <h3><a href="https://www.w3schools.com/html/default.asp" target="_blank">W3schools</a></h3>
     <h3><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div" target="_blank">MDN Docs</a></h3>
   </div></center>
+    </div>
      <center><h3 id="noans">There are no results, search again.</h3></center>
   </body>
   <script>
@@ -98,6 +100,7 @@
         }       
       }
       if (j == w3List.length) {
+       document.getElementById("all").style.display = "none";
         document.getElementById("noans").style.display = "block";
       }
     }
