@@ -92,7 +92,8 @@ document.onkeydown = (e) => {
     function findSite(x) {
       const w3List = ["div",
                     "syntax",
-                    "images"];
+                    "images",
+                     "Thisindexdoesnotexist"];
       
       let result = 0;
       var j = 0; // var to be used when there are no results
@@ -103,10 +104,10 @@ document.onkeydown = (e) => {
           document.getElementById("diver").style.display = "block";
         }
         else {
-          j += 1; // add 1 to j every time there is no match
+         continue;
         }       
       }
-      if (j == w3List.length) {
+      if (i == w3List.length - 1) {
        document.getElementById("all").style.display = "none";
         document.getElementById("noans").style.display = "block";
       }
