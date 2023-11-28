@@ -92,7 +92,7 @@ document.onkeydown = (e) => {
     function findSite(x) {
       const w3List = ["div",
                     "syntax",
-                    "images",
+                    "image",
                      "Thisindexdoesnotexist"];
       
       let result = 0;
@@ -102,12 +102,9 @@ document.onkeydown = (e) => {
         result = x.localeCompare(w3List[i]); 
         if (result == 0) {
           document.getElementById("diver").style.display = "block";
-        }
-        else {
-         continue;
-        }       
+        }  
       }
-      if (i == w3List.length - 1) {
+      if (w3List[i] === "Thisindexdoesnotexist") {
        document.getElementById("all").style.display = "none";
         document.getElementById("noans").style.display = "block";
       }
