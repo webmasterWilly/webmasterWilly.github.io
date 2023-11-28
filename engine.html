@@ -94,11 +94,11 @@ document.onkeydown = (e) => {
                     "syntax",
                     "image",
                      "Thisindexdoesnotexist"];
-      
+      let i = 0; // for the for loop
       let result = 0;
       var j = 0; // var to be used when there are no results
      
-      for (let i = 0; i < w3List.length; i++) {
+      for (i = 0; i < w3List.length; i++) {
         result = x.localeCompare(w3List[i]); 
         if (result == 0) {
           document.getElementById("diver").style.display = "block";
