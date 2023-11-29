@@ -22,15 +22,15 @@
       width: 100px;
       height: 100px;
     }
-    #cheese1:hover {
+    #cheese1:hover #cheese1 {
       opacity: 0;
       filter:alpha(opacity=0);
     }
-    #cheese2:hover {
+    #cheese2:hover #cheese3 {
      opacity: 0;
       filter:alpha(opacity=0);
     }
-    #cheese3:hover {
+    #cheese3:hover #cheese3 {
       opacity: 0;
       filter:alpha(opacity=0);
     }
@@ -41,7 +41,7 @@
   <body id="back">
     <center><h1>Don't let your mouse hit the webmines!</h1></center>
     <center><button onclick="refresh()">Reset</button></center>
-    <center><progress value="0" max="500" id="stop"></progress></center>
+    <center><progress value="0" max="400" id="stop"></progress></center>
     
     <img id="img1" onmouseenter="hoverFunc()" src="mine3.png" alt="landmine" title="landmine!!!"/>
     <img id="img2" onmouseenter="hoverFunc()" src="mine3.png" alt="landmine" title="landmine!!!"/>
@@ -127,14 +127,14 @@
     }
     setInterval(shift, 750);
 
-    let countdown = 500;
+    let countdown = 400;
     var downloadTimer = setInterval(function(){
   if(countdown <= 0){
     clearInterval(downloadTimer);
     alert("You ran out of time! Womp womp");
   location.reload();
   }
-  document.getElementById("stop").value = 500 - countdown;
+  document.getElementById("stop").value = 400 - countdown;
   countdown -= 1;
 }, 10);
 
