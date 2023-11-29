@@ -22,6 +22,15 @@
       width: 100px;
       height: 100px;
     }
+    #cheese1:hover {
+      display: none;
+    }
+    #cheese2:hover {
+      display: none;
+    }
+    #cheese3:hover {
+      display: none;
+    }
   </style>
   <head>
     <title>Web 2 Game</title>
@@ -29,7 +38,7 @@
   <body id="back">
     <center><h1>Don't let your mouse hit the webmines!</h1></center>
     <center><button onclick="refresh()">Reset</button></center>
-    <center><progress value="0" max="200" id="stop"></progress></center>
+    <center><progress value="0" max="500" id="stop"></progress></center>
     
     <img id="img1" onmouseenter="hoverFunc()" src="mine3.png" alt="landmine" title="landmine!!!"/>
     <img id="img2" onmouseenter="hoverFunc()" src="mine3.png" alt="landmine" title="landmine!!!"/>
@@ -40,7 +49,9 @@
       <img id="img7" onmouseenter="hoverFunc()" src="mine3.png" alt="landmine" title="landmine!!!"/>
  <img id="img8" onmouseenter="hoverFunc()" src="mine3.png" alt="landmine" title="landmine!!!"/>
      <img id="img10" onmouseenter="hoverFunc()" src="mine3.png" alt="landmine" title="landmine!!!"/>
-    <img id="finish" onmouseenter="alerter()" src="https://cdn3.iconfinder.com/data/icons/sports-games-4/24/Finish-512.png" alt="The end" title="The end"/>
+    <img id="cheese1" onmouseenter="win()" src="cheese2.png" alt="cheese" title="cheese"/>
+    <img id="cheese2" onmouseenter="win()" src="cheese2.png" alt="cheese" title="cheese"/>
+     <img id="cheese3" onmouseenter="win()" src="cheese2.png" alt="cheese" title="cheese"/>
   </body>
   <script>
    document.onkeydown = (e) => {
@@ -86,8 +97,13 @@
     randImg(element8);
     let element10 = document.getElementById("img10");
     randImg(element10);
-    let element9 = document.getElementById("finish");
+    let element9 = document.getElementById("cheese1");
     randImg2(element9);
+    let element11 = document.getElementById("cheese2");
+    randImg2(element11);
+    let element12 = document.getElementById("cheese3");
+    randImg2(element12);
+    
     
     function alerter() {
       alert("You touched " + final + " webmines on your journey!");
@@ -108,14 +124,14 @@
     }
     setInterval(shift, 750);
 
-    let countdown = 200;
+    let countdown = 500;
     var downloadTimer = setInterval(function(){
   if(countdown <= 0){
     clearInterval(downloadTimer);
     alert("You ran out of time! Womp womp");
   location.reload();
   }
-  document.getElementById("stop").value = 200 - countdown;
+  document.getElementById("stop").value = 500 - countdown;
   countdown -= 1;
 }, 10);
 
@@ -129,6 +145,15 @@ document.addEventListener("mouseleave", function(event){
 
   }
 });
-    
+    let w = 0;
+    function win() {
+      w +=1
+      if (w == 3) {
+        alert("You win!");
+        alerter();
+        location.reload();
+      }
+      
+    }
    </script>
 </html>
