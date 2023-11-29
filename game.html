@@ -15,7 +15,7 @@
     button:hover {
       cursor: default;
     }
-    img:hover {
+    .bad img:hover {
       cursor: url('deadMiceMan.png'), auto;
     }
     #finish {
@@ -31,7 +31,7 @@
     <center><h1>Don't let your mouse hit the webmines!</h1></center>
     <center><button onclick="refresh()">Reset</button></center>
     <center><progress value="0" max="400" id="stop"></progress></center>
-    
+    <div class="bad">
     <img id="img1" onmouseenter="hoverFunc()" src="mine3.png" alt="landmine" title="landmine!!!"/>
     <img id="img2" onmouseenter="hoverFunc()" src="mine3.png" alt="landmine" title="landmine!!!"/>
      <img id="img3" onmouseenter="hoverFunc()" src="mine3.png" alt="landmine" title="landmine!!!"/>
@@ -41,6 +41,7 @@
       <img id="img7" onmouseenter="hoverFunc()" src="mine3.png" alt="landmine" title="landmine!!!"/>
  <img id="img8" onmouseenter="hoverFunc()" src="mine3.png" alt="landmine" title="landmine!!!"/>
      <img id="img10" onmouseenter="hoverFunc()" src="mine3.png" alt="landmine" title="landmine!!!"/>
+    </div>
     <img id="cheese1" onmouseenter="win(); bye()" src="cheese2.png" alt="cheese" title="cheese"/>
     <img id="cheese2" onmouseenter="win(); bye2()" src="cheese2.png" alt="cheese" title="cheese"/>
      <img id="cheese3" onmouseenter="win(); bye3()" src="cheese2.png" alt="cheese" title="cheese"/>
