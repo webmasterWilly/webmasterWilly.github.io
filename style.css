@@ -1,0 +1,48 @@
+ body {
+     background-color: #000080;
+  }
+  h1 {
+    color: white;
+  }
+  h2 {
+    color: white;
+  }
+  .main {
+    background-image: url('https://www.textures4photoshop.com/tex/thumbs/matrix-code-animation-gif-free-animated-background-716.gif');
+    margin-top: 175px;
+    margin-left: 100px;
+    margin-right: 100px;
+    text-shadow: -15px 5px 20px #40E0D0;
+    border-radius: 15px;
+    border: 5px solid black;
+  }
+  .main:hover {
+    text-shadow: -16px 6px 15px #40E0D0;
+  }
+  .left {
+    float: left;
+    margin-top: 200px;
+    background-color: #000080;
+    border-radius: 15px;
+  }
+  .right {
+    float: right;
+    margin-top: 200px;
+    background-color: #000080;
+    border-radius: 15px;
+  }
+  .left:hover {
+    background-color: green;
+    -webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
+  }
+   .right:hover {
+     background-color: green;
+    -webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
+  }
+  .up:hover {
+    transform: translateY(-10px);
+  }
