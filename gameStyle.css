@@ -1,0 +1,21 @@
+html {
+      cursor: url('mouse3.png'), auto;
+    }
+    h1 {
+      color: white;
+      background-color: purple;
+    }
+    button {
+      border: 2px solid black;
+      border-radius: 15px;
+    }
+    button:hover {
+      cursor: default;
+    }
+    .bad img:hover {
+      cursor: url('deadMiceMan.png'), auto;
+    }
+    #finish {
+      width: 100px;
+      height: 100px;
+    }
