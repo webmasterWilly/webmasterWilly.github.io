@@ -23,11 +23,10 @@
   <h2>Mathematics:</h2>
   <input type="text" id="searchBar1" placeholder="Enter tasks here..." value=""> <button id="save" onclick="save()">Save
     Task</button>
-  <h1 id="test"></h1>
 </body>
 <script>
  let urlName = window.location.href;
-  let dayer = urlName.split("/")[1];
+  let dayer = urlName.split("/")[3];
   let dayer2 = dayer.split(".")[0];
   document.getElementById("day").innerHTML = dayer2;
 
