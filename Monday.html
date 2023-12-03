@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<style>
+  html {
+    background-color: #fff0db;
+  }
+
+  #searchBar1 {
+    background-color: #fff0db;
+    border: none;
+  }
+</style>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Digenda</title>
+</head>
+
+<body>
+  <center>
+    <h1>Your Agenda: <span id="day"></span></h1>
+  </center>
+  <h2>Mathematics:</h2>
+  <input type="text" id="searchBar1" placeholder="Enter tasks here..." value=""> <button id="save" onclick="save()">Save
+    Task</button>
+  <h1 id="test"></h1>
+</body>
+<script>
+ let urlName = window.location.href;
+  let dayer = urlName.split("/")[1];
+  let dayer2 = dayer.split(".")[0];
+  document.getElementById("day").innerHTML = dayer2;
+
+  function save() {
+    var input = document.getElementById("searchBar1");
+    localStorage.setItem("server", input.value);
+  }
+let stored1 = localStorage.getItem("server");
+  if (stored1 != null) {
+    document.getElementById("searchBar1").value = stored1;
+  }
+
+
+</script>
+
+</html>
