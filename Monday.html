@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html>
 <style>
-  html {
+html {
     background-color: #fff0db;
   }
+
   button {
-   background-color: #DAA06D;
+    background-color: #DAA06D;
     border: none;
     cursor: pointer;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
   }
+
   button:active {
     transform: translateY(2px);
   }
-  #searchBar1 {
+
+  input {
     background-color: #fff0db;
     border: none;
+    margin: 10px;
   }
 </style>
 
@@ -31,6 +35,10 @@
   <h2>Mathematics:</h2>
   <input type="text" id="searchBar1" placeholder="Enter tasks here..." value=""> <button id="save" onclick="save()">Save
     Task</button>
+ <br>
+
+  <input type="text" id="searchBar2" placeholder="Enter tasks here..." value=""><button id="save" onclick="save2()">Save
+    Task</button> <button id="elim" onclick="elim2()">Check off task</button>
 </body>
 <script>
  let urlName = window.location.href;
@@ -42,9 +50,29 @@
     var input = document.getElementById("searchBar1");
     localStorage.setItem("server", input.value);
   }
+  function save2() {
+    var input = document.getElementById("searchBar2");
+    localStorage.setItem("servertwo", input.value);
+}
+  function elim() {
+    if (confirm("Are you sure you want to check off your first task?")) {
+      document.getElementById("searchBar1").style.color = "green";
+      localStorage.removeItem("server");
+    }
+  }
+    function elim2() {
+      if (confirm("Are you sure you want to check off your second task?")) {
+        document.getElementById("searchBar2").style.color = "green";
+        localStorage.removeItem("servertwo");
+      }
+    }
 let stored1 = localStorage.getItem("server");
+let stored2 = localStorage.getItem("servertwo");
   if (stored1 != null) {
     document.getElementById("searchBar1").value = stored1;
+  }
+  if (storedtwo != null) {
+    document.getElementById("searchBar2").value = stored2;
   }
 
 
