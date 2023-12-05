@@ -1,38 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html id="all">
+
 <head>
   <meta charset="UTF-8">
   <title>Digenda</title>
-<link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsU3gsNJ9gmnkVvIzXHQ2Gbn8S4wVgXtp2Ag&usqp=CAU">
-<link rel="stylesheet" type="text/css" href="digenStyle.css">
+  <link rel="stylesheet" type="text/css" href="digenStyle.css">
 </head>
 
 <body>
-   <center>
+  <button class="delButton" onclick="deleteAll()">Delete all info for new week</button>
+  <button class="darkMode" onclick="darkFunc()">Dark Mode</button>
+  <center><button class="lightMode" onclick="lightFunc()">Light Mode</button></center>
+  <center>
     <h1>Your Agenda: <span id="day"></span></h1>
   </center>
-  <h2>Mathematics:</h2>
-  <input type="text" id="searchBar1" placeholder="Enter tasks here..." value=""> <button id="save"
+
+  <h2><input type="text" id="sectionOne" class="big" placeholder="Section one..." value=""><button id="sectionButton"
+      onclick="saveSection()">Save</button></h2>
+
+  <input type="text" id="searchBar1" placeholder="Enter tasks here..." class="allSearch" value=""> <button id="save"
     onclick="save()">Save</button> <button id="elim" onclick="elim()">Check off task</button>
 
   <br>
   <div id="next" style="display: none;">
-    <input type="text" id="searchBar2" placeholder="Enter tasks here..." value=""><button id="save"
+    <input type="text" id="searchBar2" placeholder="Enter tasks here..." class="allSearch" value=""><button id="save"
       onclick="save2()">Save</button> <button id="elim" onclick="elim2()">Check off task</button>
   </div>
   <br>
 
   <div id="next2" style="display: none;">
-    <input type="text" id="searchBar3" placeholder="Enter tasks here..." value=""><button id="save"
+    <input type="text" id="searchBar3" placeholder="Enter tasks here..." class="allSearch" value=""><button id="save"
       onclick="save3()">Save</button> <button id="elim" onclick="elim3()">Check off task</button>
   </div>
   <br>
 
   <div id="next3" style="display: none;">
-    <input type="text" id="searchBar4" placeholder="Enter tasks here..." value=""><button id=save
+    <input type="text" id="searchBar4" placeholder="Enter tasks here..." class="allSearch" value=""><button id=save
       onclick="save4()">Save</button> <button id="elim" onclick="elim4()">Check off task</button>
   </div>
+  <br>
+
+  <h2><input type="text" id="sectionTwo" class="big" placeholder="Section two..." value=""><button id="sectionButton"
+      onclick="saveSection2()">Save</button></h2>
+  <br>
+
+  <input type="text" id="searchBar5" placeholder="Enter tasks here..." class="allSearch" value=""> <button id="save"
+    onclick="save5()">Save</button> <button id="elim" onclick="elim5()">Check off task</button>
+
+
 
 </body>
 <script src="digenscript.js" type="text/javascript"></script>
+
+
 </html>
