@@ -1,82 +1,38 @@
 <!DOCTYPE html>
 <html>
-<style>
-html {
-    background-color: #fff0db;
-  }
-
-  button {
-    background-color: #DAA06D;
-    border: none;
-    cursor: pointer;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
-  }
-
-  button:active {
-    transform: translateY(2px);
-  }
-
-  input {
-    background-color: #fff0db;
-    border: none;
-    margin: 10px;
-  }
-</style>
-
 <head>
   <meta charset="UTF-8">
   <title>Digenda</title>
-    <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsU3gsNJ9gmnkVvIzXHQ2Gbn8S4wVgXtp2Ag&usqp=CAU">
+<link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsU3gsNJ9gmnkVvIzXHQ2Gbn8S4wVgXtp2Ag&usqp=CAU">
+<link rel="stylesheet" type="text/css" href="digenStyle.css">
 </head>
 
 <body>
-  <center>
+   <center>
     <h1>Your Agenda: <span id="day"></span></h1>
   </center>
   <h2>Mathematics:</h2>
-  <input type="text" id="searchBar1" placeholder="Enter tasks here..." value=""> <button id="save" onclick="save()">Save
-    Task</button> <button id="elim" onclick="elim()">Check off task</button>
- <br>
+  <input type="text" id="searchBar1" placeholder="Enter tasks here..." value=""> <button id="save"
+    onclick="save()">Save</button> <button id="elim" onclick="elim()">Check off task</button>
 
-  <input type="text" id="searchBar2" placeholder="Enter tasks here..." value=""><button id="save" onclick="save2()">Save
-    Task</button> <button id="elim" onclick="elim2()">Check off task</button>
+  <br>
+  <div id="next" style="display: none;">
+    <input type="text" id="searchBar2" placeholder="Enter tasks here..." value=""><button id="save"
+      onclick="save2()">Save</button> <button id="elim" onclick="elim2()">Check off task</button>
+  </div>
+  <br>
+
+  <div id="next2" style="display: none;">
+    <input type="text" id="searchBar3" placeholder="Enter tasks here..." value=""><button id="save"
+      onclick="save3()">Save</button> <button id="elim" onclick="elim3()">Check off task</button>
+  </div>
+  <br>
+
+  <div id="next3" style="display: none;">
+    <input type="text" id="searchBar4" placeholder="Enter tasks here..." value=""><button id=save
+      onclick="save4()">Save</button> <button id="elim" onclick="elim4()">Check off task</button>
+  </div>
+
 </body>
-<script>
- let urlName = window.location.href;
-  let dayer = urlName.split("/")[3];
-  let dayer2 = dayer.split(".")[0];
-  document.getElementById("day").innerHTML = dayer2;
-
-  function save() {
-    var input = document.getElementById("searchBar1");
-    localStorage.setItem("server", input.value);
-  }
-  function save2() {
-    var input = document.getElementById("searchBar2");
-    localStorage.setItem("servertwo", input.value);
-}
-  function elim() {
-    if (confirm("Are you sure you want to check off your first task?")) {
-      document.getElementById("searchBar1").style.color = "green";
-      localStorage.removeItem("server");
-    }
-  }
-    function elim2() {
-      if (confirm("Are you sure you want to check off your second task?")) {
-        document.getElementById("searchBar2").style.color = "green";
-        localStorage.removeItem("servertwo");
-      }
-    }
-let stored1 = localStorage.getItem("server");
-let stored2 = localStorage.getItem("servertwo");
-  if (stored1 != null) {
-    document.getElementById("searchBar1").value = stored1;
-  }
-  if (storedtwo != null) {
-    document.getElementById("searchBar2").value = stored2;
-  }
-
-
-</script>
-
+<script src="digenscript.js" type="text/javascript"></script>
 </html>
