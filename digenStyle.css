@@ -5,6 +5,7 @@ html {
 button {
   background-color: #DAA06D;
   color: black;
+  border-radius: 15px;
   border: none;
   cursor: pointer;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
