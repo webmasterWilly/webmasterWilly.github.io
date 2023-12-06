@@ -85,6 +85,10 @@ function save10() {
   var input = document.getElementById("searchBar10");
   localStorage.setItem("serverten", input.value);
 }
+function save11() {
+  var input = document.getElementById("searchBar11");
+  localStorage.setItem("servereleven", input.value);
+}
 function elim() {
   if (confirm("Are you sure you want to check off your first task?")) {
     document.getElementById("searchBar1").style.color = "green";
@@ -169,11 +173,24 @@ function elim10() {
   }
   location.reload();
 }
+function elim11() {
+  if (confirm("Are you sure you want to check off your seventh task?")) {
+    document.getElementById("searchBar11").style.color = "green";
+    // remove item from local storage
+    localStorage.removeItem("servereleven");
+    // remove that item from the page
+    localStorage.setItem("showornah8", "none");
+  }
+  location.reload();
+}
 // variables are getting all of the local storage attributes
 let darkMod = localStorage.getItem("serverDark");
 let sectorOne = localStorage.getItem("secOne");
 let sectorTwo = localStorage.getItem("secTwo");
 let sectorThree = localStorage.getItem("secThree");
+
+
+let showornot8 = localStorage.getItem("showornah8");
 let showornot7 = localStorage.getItem("showornah7");
 let showornot6 = localStorage.getItem("showornah6");
 let showornot5 = localStorage.getItem("showornah5");
@@ -181,6 +198,8 @@ let showornot4 = localStorage.getItem("showornah4");
 let showornot3 = localStorage.getItem("showornah3");
 let showornot2 = localStorage.getItem("showornah2");
 let showornot = localStorage.getItem("showornah");
+
+
 let stored1 = localStorage.getItem("server");
 let stored2 = localStorage.getItem("servertwo");
 let stored3 = localStorage.getItem("serverthree");
@@ -191,6 +210,7 @@ let stored7 = localStorage.getItem("serverseven");
 let stored8 = localStorage.getItem("servereight");
 let stored9 = localStorage.getItem("servernine");
 let stored10 = localStorage.getItem("serverten");
+let stored11 = localStorage.getItem("severeleven");
 // these if statements use the local storage to determine what info is getting saved
 if (darkMod != null) {
   document.getElementById("all").style.backgroundColor = "black";
@@ -249,6 +269,9 @@ if (stored9 != null) {
 if (stored10 != null) {
   document.getElementById("searchBar10").value = stored10;
 }
+if (stored11 != null) {
+  document.getElementById("searchBar11").value = stored11;
+}
 if (showornot === "block") {
   document.getElementById("next").style.display = "block";
 }
@@ -290,4 +313,10 @@ if (showornot7 === "block") {
 }
 else if (showornot7 === "none") {
   document.getElementById("next7").style.display = "none";
+}
+if (showornot8 === "block") {
+  document.getElementById("next8").style.display = "block";
+}
+else if (showornot8 === "none") {
+  document.getElementById("next8").style.display = "none";
 }
