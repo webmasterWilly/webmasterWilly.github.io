@@ -84,6 +84,8 @@ function save9() {
 function save10() {
   var input = document.getElementById("searchBar10");
   localStorage.setItem("serverten", input.value);
+  localStorage.setItem("showornah8", "block");
+  document.getElementById("next8").style.display = "block";
 }
 function save11() {
   var input = document.getElementById("searchBar11");
