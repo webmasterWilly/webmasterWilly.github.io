@@ -207,7 +207,7 @@ if (darkMod != null) {
   }
   var blocky3 = document.getElementsByClassName("butter");
   for (var w = 0; w < blocky3.length; w++) {
-    blocky3[w].style.backgroundColor = "blue";
+    blocky3[w].style.backgroundColor = "#7CB9E8";
   }
 }
 if (sectorOne != null) {
