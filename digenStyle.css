@@ -25,7 +25,6 @@ input {
 }
 .delButton {
   text-align: center;
-  height: 15px;
   background-color: red;
   position: absolute;
   color: white;
@@ -36,7 +35,6 @@ input {
 }
 .darkMode {
   text-align: center;
-  height: 15px;
   background-color: black;
   position: absolute;
   color: white;
