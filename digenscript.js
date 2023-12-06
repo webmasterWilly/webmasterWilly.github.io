@@ -212,7 +212,7 @@ let stored7 = localStorage.getItem("serverseven");
 let stored8 = localStorage.getItem("servereight");
 let stored9 = localStorage.getItem("servernine");
 let stored10 = localStorage.getItem("serverten");
-let stored11 = localStorage.getItem("severeleven");
+let stored11 = localStorage.getItem("servereleven");
 // these if statements use the local storage to determine what info is getting saved
 if (darkMod != null) {
   document.getElementById("all").style.backgroundColor = "black";
