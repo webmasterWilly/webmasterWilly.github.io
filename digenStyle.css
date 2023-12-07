@@ -21,6 +21,8 @@ input {
   margin: 10px;
 }
 a {
+  margin: 10px;
+  color: #7CB9E8;
   text-decoration: underline 0.15em rgba(255, 255, 255, 0);
   transition: text-decoration-color 300ms;
 }
